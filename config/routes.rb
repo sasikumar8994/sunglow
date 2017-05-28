@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   resources :products
-  mount Rich::Engine => '/rich', :as => 'rich'
   devise_for :users
   root 'static_page#home'
 

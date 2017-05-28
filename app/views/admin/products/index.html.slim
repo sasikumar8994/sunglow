@@ -1,33 +1,38 @@
-h1 Listing products
+.col-md-12.col-sm-12.col-xs-12
+  .x_panel
+    .x_title
+      h2
+        | Product
+      ul.nav.navbar-right.panel_toolbox
+        li
+          = link_to "New Product", new_admin_product_path
+      .clearfix
 
-table
-  thead
-    tr
-      th Name
-      th Description
-      th Benefits
-      th Features
-      th Notes
-      th Specification
-      th Slug
-      th
-      th
-      th
-
-  tbody
-    - @products.each do |product|
-      tr
-        td = product.name
-        td = product.description
-        td = product.benefits
-        td = product.features
-        td = product.notes
-        td = product.specification
-        td = product.slug
-        td = link_to 'Show', product
-        td = link_to 'Edit', edit_product_path(product)
-        td = link_to 'Destroy', product, data: { confirm: 'Are you sure?' }, method: :delete
-
-br
-
-= link_to 'New Product', new_product_path
+    .x_content
+      .table-responsive
+        table.table.table-striped.jambo_table.bulk_action
+          thead
+            tr.headings
+              th Name
+              th Description
+              th Benefits
+              th Features
+              th Notes
+              th Specification
+              th Slug
+              th
+              th
+              th
+          tbody
+            - @products.each do |product|
+              tr.even.pointer
+                td = product.name
+                td = product.description
+                td = product.benefits
+                td = product.features
+                td = product.notes
+                td = product.specification
+                td = product.slug
+                td = link_to 'Show', product
+                td = link_to 'Edit', edit_product_path(product)
+                td = link_to 'Destroy', product, data: { confirm: 'Are you sure?' }, method: :delete
