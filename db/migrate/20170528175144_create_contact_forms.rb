@@ -1,6 +1,6 @@
-class CreateContactUs < ActiveRecord::Migration[5.0]
+class CreateContactForms < ActiveRecord::Migration[5.0]
   def change
-    create_table :contact_us do |t|
+    create_table :contact_forms do |t|
       t.string :hours_of_operation
       t.string :number_of_fixtures
       t.string :company

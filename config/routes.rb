@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :contact_us
+  resources :contact_form
   resources :products
   devise_for :users
   root 'static_page#home'
@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :products
+    resources :contact_forms
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20170528175144) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "contact_us", force: :cascade do |t|
+  create_table "contact_forms", force: :cascade do |t|
     t.string   "hours_of_operation"
     t.string   "number_of_fixtures"
     t.string   "company"
