@@ -18,31 +18,31 @@
               - @product.errors.full_messages.each do |message|
                 li = message
         .form-group
-          label.control-label.col-md-3.col-sm-3.col-xs-12 for="first-name" 
+          label.col-md-2.col-sm-2.col-xs-12 for="first-name" 
             | Title
             span.required *
-          .col-md-6.col-sm-6.col-xs-12
-            = f.input :name, class: 'form-control col-md-7 col-xs-12', label: false
+          .col-md-10.col-sm-10.col-xs-12
+            = f.input :name, input_html: {class: 'form-control col-md-12 col-xs-12'}, label: false
         .form-group
-          label.control-label.col-md-3.col-sm-3.col-xs-12 for="last-name" 
+          label.col-md-3.col-sm-3.col-xs-12 for="last-name" 
             | Description
             span.required *
-          .col-md-6.col-sm-6.col-xs-12
-            = f.input :description, class: 'form-control col-md-7 col-xs-12', label: false
+          .col-md-12.col-sm-12.col-xs-12
+            = f.input :description, class: 'form-control col-md-12 col-xs-12', label: false
         .form-group
-          label.control-label.col-md-3.col-sm-3.col-xs-12 for="middle-name"  Benefit
-          .col-md-6.col-sm-6.col-xs-12
-            = f.input :benefits, class: 'form-control col-md-7 col-xs-12', label: false
+          label.col-md-3.col-sm-3.col-xs-12 for="middle-name"  Benefit
+          .col-md-12.col-sm-12.col-xs-12
+            = f.input :benefits, class: 'form-control col-md-12 col-xs-12', label: false
         .form-group
-          label.control-label.col-md-3.col-sm-3.col-xs-12 Feature
-          .col-md-6.col-sm-6.col-xs-12
-            = f.input :features, class: 'form-control col-md-7 col-xs-12', label: false
+          label.col-md-3.col-sm-3.col-xs-12 Feature
+          .col-md-12.col-sm-12.col-xs-12
+            = f.input :features, class: 'form-control col-md-12 col-xs-12', label: false
         .form-group
-          label.control-label.col-md-3.col-sm-3.col-xs-12
+          label.col-md-3.col-sm-3.col-xs-12
             | Specification
             span.required *
-          .col-md-6.col-sm-6.col-xs-12
-            = f.input :specification, class: 'form-control col-md-7 col-xs-12', label: false
+          .col-md-12.col-sm-12.col-xs-12
+            = f.input :specification, class: 'form-control col-md-12 col-xs-12', label: false
 
         .ln_solid
         .form-group
