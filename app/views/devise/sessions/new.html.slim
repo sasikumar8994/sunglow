@@ -1,0 +1,49 @@
+.login
+  div
+    a#signup.hiddenanchor
+    a#signin.hiddenanchor
+    .login_wrapper
+      .animate.form.login_form
+        section.login_content
+          = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+            h1 Login Form
+            div
+              = f.input :email, required: false, autofocus: true, class: 'form-control'
+            div
+              = f.input :password, required: false, class: 'form-control'
+            div
+              = f.button :submit, "Log in", class: 'btn btn-default submit'
+              a.reset_pass href="#"  Lost your password?
+            .clearfix
+            .separator
+              br/
+              div
+                h1
+                  i.fa.fa-paw
+                  | Sunglow
+                p ©2017 All Rights Reserved.
+      #register.animate.form.registration_form
+        section.login_content
+          = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+            h1 Create Account
+            div
+              = f.input :email, required: true, autofocus: true, class: 'form-control'
+            div
+              = f.input :password, required: true, class: 'form-control'
+            div
+              = f.input :password_confirmation, required: true, class: 'form-control'
+            div
+              a.btn.btn-default.submit href="index.html"  Submit
+              = f.button :submit, "Sign up", class: 'btn btn-default submit'
+            .clearfix
+            .separator
+              p.change_link
+                | Already a member ?
+                a.to_register href="#signin"  Log in
+              .clearfix
+              br/
+              div
+                h1
+                  i.fa.fa-paw
+                  | Gentelella Alela!
+                p ©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms

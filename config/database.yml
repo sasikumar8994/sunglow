@@ -1,0 +1,9 @@
+development:
+  adapter: postgresql
+  database: sunglow_development
+  pool: 5
+  timeout: 5000
+  username: anbu
+  password: password
+  host: localhost
+

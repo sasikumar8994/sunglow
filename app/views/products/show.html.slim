@@ -1,0 +1,27 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @product.name
+p
+  strong Description:
+  = @product.description
+p
+  strong Benefits:
+  = @product.benefits
+p
+  strong Features:
+  = @product.features
+p
+  strong Notes:
+  = @product.notes
+p
+  strong Specification:
+  = @product.specification
+p
+  strong Slug:
+  = @product.slug
+
+= link_to 'Edit', edit_product_path(@product)
+'  |
+= link_to 'Back', products_path
