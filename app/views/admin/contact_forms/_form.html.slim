@@ -1,30 +1,62 @@
-= form_for @contact_u do |f|
-  - if @contact_u.errors.any?
-    #error_explanation
-      h2 = "#{pluralize(@contact_u.errors.count, "error")} prohibited this contact_u from being saved:"
-      ul
-        - @contact_u.errors.full_messages.each do |message|
-          li = message
+.col-md-12.col-sm-12.col-xs-12
+  .x_panel
+    .x_title
+      h2
+        | New Contact form
+      ul.nav.navbar-right.panel_toolbox
+        li
+          = link_to 'Back', products_path
+      .clearfix
+    .x_content
+      br/
 
-  .field
-    = f.label :hours_of_operation
-    = f.text_field :hours_of_operation
-  .field
-    = f.label :number_of_fixtures
-    = f.text_field :number_of_fixtures
-  .field
-    = f.label :company
-    = f.text_field :company
-  .field
-    = f.label :first_name
-    = f.text_field :first_name
-  .field
-    = f.label :last_name
-    = f.text_field :last_name
-  .field
-    = f.label :email
-    = f.text_field :email
-  .field
-    = f.label :phone
-    = f.text_field :phone
-  .actions = f.submit
+      = simple_form_for([:admin, @contact_form], html: {class: 'form-horizontal'}) do |f|
+        - if @contact_form.errors.any?
+          #error_explanation
+            h2 = "#{pluralize(@product.errors.count, "error")} prohibited this product from being saved:"
+            ul
+              - @contact_form.errors.full_messages.each do |message|
+                li = message
+        .form-group
+          label.col-md-2.col-sm-2.col-xs-12 for="first-name" 
+            | Hours of operation
+            span.required *
+          .col-md-10.col-sm-10.col-xs-12
+            = f.input :hours_of_operation, input_html: {class: 'form-control col-md-12 col-xs-12'}, label: false
+        .form-group
+          label.col-md-2.col-sm-2.col-xs-12 for="last-name" 
+            | Number of fixtures
+            span.required *
+          .col-md-10.col-sm-10.col-xs-12
+            = f.input :number_of_fixtures, input_html: {class: 'form-control col-md-12 col-xs-12'}, label: false
+        .form-group
+          label.col-md-2.col-sm-2.col-xs-12 for="middle-name"  Company
+          .col-md-10.col-sm-10.col-xs-12
+            = f.input :company, input_html: {class: 'form-control col-md-12 col-xs-12'}, label: false
+        .form-group
+          label.col-md-2.col-sm-2.col-xs-12 First Name
+          .col-md-10.col-sm-10.col-xs-12
+            = f.input :first_name, input_html: {class: 'form-control col-md-12 col-xs-12'}, label: false
+        .form-group
+          label.col-md-2.col-sm-2.col-xs-12
+            | Last Name
+            span.required *
+          .col-md-10.col-sm-10.col-xs-12
+            = f.input :last_name, input_html: {class: 'form-control col-md-12 col-xs-12'}, label: false
+        .form-group
+          label.col-md-2.col-sm-2.col-xs-12
+            | Email
+            span.required *
+          .col-md-10.col-sm-10.col-xs-12
+            = f.input :email, input_html: {class: 'form-control col-md-12 col-xs-12'}, label: false
+        .form-group
+          label.col-md-2.col-sm-2.col-xs-12
+            | Phone
+            span.required *
+          .col-md-10.col-sm-10.col-xs-12
+            = f.input :phone, input_html: {class: 'form-control col-md-12 col-xs-12'}, label: false
+
+        .ln_solid
+        .form-group
+          .col-md-6.col-sm-6.col-xs-12.col-md-offset-3
+            = f.submit
