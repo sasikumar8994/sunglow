@@ -1,33 +1,38 @@
-h1 Listing contact_forms
+.col-md-12.col-sm-12.col-xs-12
+  .x_panel
+    .x_title
+      h2
+        | Contact Form
+      ul.nav.navbar-right.panel_toolbox
+        li
+          = link_to "New Contact form", new_admin_contact_form_path
+      .clearfix
 
-table
-  thead
-    tr
-      th Hours of operation
-      th Number of fixtures
-      th Company
-      th First name
-      th Last name
-      th Email
-      th Phone
-      th
-      th
-      th
-
-  tbody
-    - @contact_forms.each do |contact_form|
-      tr
-        td = contact_form.hours_of_operation
-        td = contact_form.number_of_fixtures
-        td = contact_form.company
-        td = contact_form.first_name
-        td = contact_form.last_name
-        td = contact_form.email
-        td = contact_form.phone
-        td = link_to 'Show', contact_form
-        td = link_to 'Edit', edit_contact_form_path(contact_form)
-        td = link_to 'Destroy', contact_form, data: { confirm: 'Are you sure?' }, method: :delete
-
-br
-
-= link_to 'New Contact u', new_contact_form_path
+    .x_content
+      .table-responsive
+        table.table.table-striped.jambo_table.bulk_action
+          thead
+            tr.headings
+              th Hours of operation
+              th Number of fixtures
+              th Company
+              th First name
+              th Last name
+              th Email
+              th Phone
+              th
+              th
+              th
+          tbody
+            - @contact_forms.each do |product|
+              tr.even.pointer
+                td = contact_form.hours_of_operation
+                td = contact_form.number_of_fixtures
+                td = contact_form.company
+                td = contact_form.first_name
+                td = contact_form.last_name
+                td = contact_form.email
+                td = contact_form.phone
+                td = link_to 'Show', contact_form
+                td = link_to 'Edit', edit_contact_form_path(contact_form)
+                td = link_to 'Destroy', contact_form, data: { confirm: 'Are you sure?' }, method: :delete
