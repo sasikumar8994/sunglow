@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :contact_form
+  resources :contact_forms
   resources :products
   devise_for :users
   root 'static_page#home'
