@@ -30,7 +30,7 @@ gem 'money-rails'
 gem 'kaminari'
 gem "paranoia", :github => "radar/paranoia", :branch => "rails4"
 gem 'rails_admin', '~> 1.1.1'
-gem 'rich'
+gem 'rich', github: 'kreativgebiet/rich', ref: '3e92749ac77ee171bd6f0643d67b1579cc1c1271'
 gem 'gentelella-rails'
 
 group :development, :test do

@@ -1,30 +1,50 @@
-= form_for @product do |f|
-  - if @product.errors.any?
-    #error_explanation
-      h2 = "#{pluralize(@product.errors.count, "error")} prohibited this product from being saved:"
-      ul
-        - @product.errors.full_messages.each do |message|
-          li = message
+.col-md-12.col-sm-12.col-xs-12
+  .x_panel
+    .x_title
+      h2
+        | New Product
+      ul.nav.navbar-right.panel_toolbox
+        li
+          = link_to 'Back', products_path
+      .clearfix
+    .x_content
+      br/
 
-  .field
-    = f.label :name
-    = f.text_field :name
-  .field
-    = f.label :description
-    = f.text_area :description
-  .field
-    = f.label :benefits
-    = f.text_area :benefits
-  .field
-    = f.label :features
-    = f.text_area :features
-  .field
-    = f.label :notes
-    = f.text_area :notes
-  .field
-    = f.label :specification
-    = f.text_area :specification
-  .field
-    = f.label :slug
-    = f.text_field :slug
-  .actions = f.submit
+      = simple_form_for(@product, html: {class: 'form-horizontal'}) do |f|
+        - if @product.errors.any?
+          #error_explanation
+            h2 = "#{pluralize(@product.errors.count, "error")} prohibited this product from being saved:"
+            ul
+              - @product.errors.full_messages.each do |message|
+                li = message
+        .form-group
+          label.control-label.col-md-3.col-sm-3.col-xs-12 for="first-name" 
+            | Title
+            span.required *
+          .col-md-6.col-sm-6.col-xs-12
+            = f.input :name, class: 'form-control col-md-7 col-xs-12', label: false
+        .form-group
+          label.control-label.col-md-3.col-sm-3.col-xs-12 for="last-name" 
+            | Description
+            span.required *
+          .col-md-6.col-sm-6.col-xs-12
+            = f.input :description, class: 'form-control col-md-7 col-xs-12', label: false
+        .form-group
+          label.control-label.col-md-3.col-sm-3.col-xs-12 for="middle-name"  Benefit
+          .col-md-6.col-sm-6.col-xs-12
+            = f.input :benefits, class: 'form-control col-md-7 col-xs-12', label: false
+        .form-group
+          label.control-label.col-md-3.col-sm-3.col-xs-12 Feature
+          .col-md-6.col-sm-6.col-xs-12
+            = f.input :features, class: 'form-control col-md-7 col-xs-12', label: false
+        .form-group
+          label.control-label.col-md-3.col-sm-3.col-xs-12
+            | Specification
+            span.required *
+          .col-md-6.col-sm-6.col-xs-12
+            = f.input :specification, class: 'form-control col-md-7 col-xs-12', label: false
+
+        .ln_solid
+        .form-group
+          .col-md-6.col-sm-6.col-xs-12.col-md-offset-3
+            = f.submit

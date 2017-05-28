@@ -10,6 +10,19 @@ GIT
       mimemagic (~> 0.3.0)
 
 GIT
+  remote: https://github.com/kreativgebiet/rich.git
+  revision: 3e92749ac77ee171bd6f0643d67b1579cc1c1271
+  ref: 3e92749ac77ee171bd6f0643d67b1579cc1c1271
+  specs:
+    rich (1.4.8)
+      jquery-rails
+      kaminari
+      mime-types
+      rack-raw-upload
+      rails (>= 3.2.0)
+      sass-rails
+
+GIT
   remote: https://github.com/radar/paranoia.git
   revision: bd3383729c790bf09e488f84221eaaea27c6597e
   branch: rails4
@@ -268,14 +281,6 @@ GEM
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
-    rich (1.4.6)
-      jquery-rails
-      kaminari
-      mime-types
-      paperclip
-      rack-raw-upload
-      rails (>= 3.2.0)
-      sass-rails
     rspec (3.6.0)
       rspec-core (~> 3.6.0)
       rspec-expectations (~> 3.6.0)
@@ -373,7 +378,7 @@ DEPENDENCIES
   rails (~> 5.0.3)
   rails_admin (~> 1.1.1)
   rails_layout
-  rich
+  rich!
   sass-rails (~> 5.0)
   simple_form
   slim-rails
