@@ -1,0 +1,353 @@
+header.header.fixed.clearfix
+  .container
+    .row
+      .col-md-3
+        /! header-first start
+        /! ================
+        .header-first.clearfix
+          /! logo
+          #logo.logo
+            a href="http://htmlcoder.me/preview/the_project/v.1.4/template/index.html" 
+              = image_tag('logo_orange.png')
+          /! name-and-slogan
+          .site-slogan
+            | Multipurpose HTML5 Template
+        /! header-first end
+      .col-md-9
+        /! header-second start
+        /! ================
+        .header-second.clearfix
+          /! main-navigation start
+          /! classes:
+          /! "onclick": Makes the dropdowns open on click, this the default bootstrap behavior e.g. class="main-navigation onclick"
+          /! "animated": Enables animations on dropdowns opening e.g. class="main-navigation animated"
+          /! "with-dropdown-buttons": Mandatory class that adds extra space, to the main navigation, for the search and cart dropdowns
+          /! ================
+          .main-navigation.animated.with-dropdown-buttons
+            /! navbar start
+            /! ================
+            nav.navbar.navbar-default role="navigation" 
+              .container-fluid
+                /! Toggle get grouped for better mobile display
+                .navbar-header
+                  button.navbar-toggle data-target="#navbar-collapse-1" data-toggle="collapse" type="button" 
+                    span.sr-only Toggle navigation
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                /! Collect the nav links, forms, and other content for toggling
+                #navbar-collapse-1.collapse.navbar-collapse
+                  /! main-menu
+                  ul.nav.navbar-nav
+                    /! mega-menu start
+                    li.dropdown.active.mega-menu
+                      a.dropdown-toggle data-toggle="dropdown" href="http://htmlcoder.me/preview/the_project/v.1.4/template/index.html"  Home
+                      ul.dropdown-menu
+                        li
+                          .row
+                            .col-md-12
+                              h4.title
+                                i.fa.fa-laptop.pr-10
+                                | Demos
+                              .row
+                                .col-sm-6.col-md-3
+                                  .divider
+                                  ul.menu
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/index.html" 
+                                        i.icon-home.pr-10
+                                        | Home Default
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/index-rtl.html" 
+                                        i.icon-home.pr-10
+                                        | Home Default - RTL
+                                        span.badge New
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/index-corporate-1.html" 
+                                        i.icon-suitcase.pr-10
+                                        | Corporate 1
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/index-corporate-2.html" 
+                                        i.icon-suitcase.pr-10
+                                        | Corporate 2
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/index-corporate-3.html" 
+                                        i.icon-suitcase.pr-10
+                                        | Corporate 3
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/index-corporate-4.html" 
+                                        i.icon-suitcase.pr-10
+                                        | Corporate 4
+                                        span.badge v1.2
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/index-corporate-5.html" 
+                                        i.icon-suitcase.pr-10
+                                        | Corporate 5 (Law Firm)
+                                        span.badge v1.3
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/index-shop.html" 
+                                        i.icon-basket-1.pr-10
+                                        | Commerce 1
+                                .col-sm-6.col-md-3
+                                  .divider
+                                  ul.menu
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/index-shop-2.html" 
+                                        i.icon-basket-1.pr-10
+                                        | Commerce 2
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/index-portfolio.html" 
+                                        i.icon-briefcase.pr-10
+                                        | Portfolio/Agency
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/index-portfolio-2.html" 
+                                        i.icon-camera.pr-10
+                                        | Portfolio 2
+                                        span.badge New
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/index-medical.html" 
+                                        i.fa.fa-ambulance.pr-10
+                                        | Medical
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/index-restaurant.html" 
+                                        i.fa.fa-cutlery.pr-10
+                                        | Restaurant
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/index-restaurant-2.html" 
+                                        i.fa.fa-cutlery.pr-10
+                                        | Restaurant 2
+                                        span.badge v1.3
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/index-wedding.html" 
+                                        i.icon-heart.pr-10
+                                        | Wedding
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/index-landing.html" 
+                                        i.fa.fa-star.pr-10
+                                        | Landing Page
+                                .col-sm-6.col-md-3
+                                  .divider
+                                  ul.menu
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/index-landing-2.html" 
+                                        i.fa.fa-star.pr-10
+                                        | Landing Page 2
+                                        span.badge v1.3
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/page-coming-soon.html" 
+                                        i.fa.fa-clock-o.pr-10
+                                        | Coming Soon
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/index-one-page.html" 
+                                        i.icon-home.pr-10
+                                        | One Page Version
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/index-construction.html" 
+                                        i.fa.fa-building.pr-10
+                                        | Construction
+                                        span.badge v1.1
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/index-education.html" 
+                                        i.fa.fa-graduation-cap.pr-10
+                                        | Education
+                                        span.badge v1.1
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/index-hotel.html" 
+                                        i.fa.fa-bed.pr-10
+                                        | Hotel
+                                        span.badge v1.1
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/index-blog.html" 
+                                        i.fa.fa-pencil.pr-10
+                                        | Blog
+                                        span.badge v1.1
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/index-blog-2.html" 
+                                        i.fa.fa-pencil.pr-10
+                                        | Blog 2
+                                        span.badge v1.3
+                                .col-sm-6.col-md-3
+                                  .divider
+                                  ul.menu
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/index-beauty.html" 
+                                        i.fa.fa-magic.pr-10
+                                        | Beauty Center
+                                        span.badge v1.1
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/index-gym.html" 
+                                        i.fa.fa-heartbeat.pr-10
+                                        | Gym
+                                        span.badge v1.2
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/index-resume.html" 
+                                        i.fa.fa-user.pr-10
+                                        | Resume
+                                        span.badge v1.2
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/index-agency.html" 
+                                        i.fa.fa-users.pr-10
+                                        | Agency
+                                        span.badge v1.2
+                                    li.active
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/index-logistics.html" 
+                                        i.fa.fa-truck.pr-10
+                                        | Logistics
+                                        span.badge v1.2
+                    /! mega-menu end
+                    /! mega-menu start
+                    li.dropdown.mega-menu
+                      a.dropdown-toggle data-toggle="dropdown" href="http://htmlcoder.me/preview/the_project/v.1.4/template/index-logistics.html#"  Pages
+                      ul.dropdown-menu
+                        li
+                          .row
+                            .col-lg-8.col-md-9
+                              h4.title Pages
+                              .row
+                                .col-sm-4
+                                  .divider
+                                  ul.menu
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/page-about.html" 
+                                        i.fa.fa-angle-right
+                                        | About Us 1
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/page-about-2.html" 
+                                        i.fa.fa-angle-right
+                                        | About Us 2
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/page-about-3.html" 
+                                        i.fa.fa-angle-right
+                                        | About Us 3
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/page-about-4.html" 
+                                        i.fa.fa-angle-right
+                                        | About Us 4
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/page-about-me.html" 
+                                        i.fa.fa-angle-right
+                                        | About Me
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/page-team.html" 
+                                        i.fa.fa-angle-right
+                                        | Our Team - Options 1
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/page-team-2.html" 
+                                        i.fa.fa-angle-right
+                                        | Our Team - Options 2
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/page-team-3.html" 
+                                        i.fa.fa-angle-right
+                                        | Our Team - Options 3
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/page-coming-soon.html" 
+                                        i.fa.fa-angle-right
+                                        | Coming Soon Page
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/page-faq.html" 
+                                        i.fa.fa-angle-right
+                                        | FAQ page
+                                .col-sm-4
+                                  .divider
+                                  ul.menu
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/page-services.html" 
+                                        i.fa.fa-angle-right
+                                        | Services 1
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/page-services-2.html" 
+                                        i.fa.fa-angle-right
+                                        | Services 2
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/page-services-3.html" 
+                                        i.fa.fa-angle-right
+                                        | Services 3
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/page-contact.html" 
+                                        i.fa.fa-angle-right
+                                        | Contact 1
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/page-contact-2.html" 
+                                        i.fa.fa-angle-right
+                                        | Contact 2
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/page-contact-3.html" 
+                                        i.fa.fa-angle-right
+                                        | Contact 3
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/page-login.html" 
+                                        i.fa.fa-angle-right
+                                        | Login 1
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/page-login-2.html" 
+                                        i.fa.fa-angle-right
+                                        | Login 2 - Fullsreen
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/page-signup.html" 
+                                        i.fa.fa-angle-right
+                                        | Sign Up 1
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/page-signup-2.html" 
+                                        i.fa.fa-angle-right
+                                        | Sign Up 2 - Fullsreen
+                                .col-sm-4
+                                  .divider
+                                  ul.menu
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/page-404.html" 
+                                        i.fa.fa-angle-right
+                                        | 404 error
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/page-404-2.html" 
+                                        i.fa.fa-angle-right
+                                        | 404 error - Parallax
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/page-affix-sidebar.html" 
+                                        i.fa.fa-angle-right
+                                        | Sidebar - Affix Menu
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/page-left-sidebar.html" 
+                                        i.fa.fa-angle-right
+                                        | Left Sidebar
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/page-right-sidebar.html" 
+                                        i.fa.fa-angle-right
+                                        | Right Sidebar
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/page-two-sidebars.html" 
+                                        i.fa.fa-angle-right
+                                        | Two Sidebars
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/page-two-sidebars-left.html" 
+                                        i.fa.fa-angle-right
+                                        | Two Sidebars Left
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/page-two-sidebars-right.html" 
+                                        i.fa.fa-angle-right
+                                        | Two Sidebars Right
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/page-no-sidebars.html" 
+                                        i.fa.fa-angle-right
+                                        | No Sidebars
+                                    li
+                                      a href="http://htmlcoder.me/preview/the_project/v.1.4/template/page-sitemap.html" 
+                                        i.fa.fa-angle-right
+                                        | Sitemap
+                            .col-lg-4.col-md-3.hidden-sm
+                              h4.title Premium HTML5 Template
+                              p.mb-10 The Project is perfectly suitable for corporate, business and company webpages.
+                              
+                  /! main-menu end
+                  /! header buttons
+                  .header-dropdown-buttons
+                    a.btn.btn-sm.hidden-xs.btn-default href="mailto:theproject@info.com" 
+                      | Contact Us
+                      i.fa.fa-envelope-o.pl-5
+                    a.btn.btn-lg.visible-xs.btn-block.btn-default href="mailto:theproject@info.com" 
+                      | Contact Us
+                      i.fa.fa-envelope-o.pl-5
+                  /! header buttons end
+            /! navbar end
+          /! main-navigation end
+        /! header-second end
+/! header end

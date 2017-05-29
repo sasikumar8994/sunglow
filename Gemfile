@@ -30,9 +30,7 @@ gem 'money-rails'
 gem 'kaminari'
 gem "paranoia", :github => "radar/paranoia", :branch => "rails4"
 gem 'gentelella-rails'
-
 gem "wysiwyg-rails"
-
 gem 'cocoon'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
