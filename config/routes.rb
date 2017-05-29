@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :contact_forms
-  resources :products
+  resources :contact_forms, except: [:index, :show, :update, :destroy]
+  resources :products, only: :show
   devise_for :users
   root 'static_page#home'
 

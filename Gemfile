@@ -33,9 +33,11 @@ gem 'gentelella-rails'
 
 gem "wysiwyg-rails"
 
+gem 'cocoon'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'pry'
   gem 'better_errors'
   gem 'guard-bundler'
   gem 'guard-rails'

@@ -5,12 +5,12 @@
         | New Product
       ul.nav.navbar-right.panel_toolbox
         li
-          = link_to 'Back', products_path
+          = link_to 'Back', admin_products_path
       .clearfix
     .x_content
       br/
 
-      = simple_form_for(@product, html: {class: 'form-horizontal'}) do |f|
+      = simple_form_for([:admin,@product], html: {class: 'form-horizontal'}) do |f|
         - if @product.errors.any?
           #error_explanation
             h2 = "#{pluralize(@product.errors.count, "error")} prohibited this product from being saved:"
@@ -23,6 +23,16 @@
             span.required *
           .col-md-10.col-sm-10.col-xs-12
             = f.input :name, input_html: {class: 'form-control col-md-12 col-xs-12'}, label: false
+        .form-group
+          label.col-md-2.col-sm-2.col-xs-12 for="first-name" 
+            | Images
+            span.required *
+          .col-md-10.col-sm-10.col-xs-12
+           
+        = f.simple_fields_for :pictures do |picture|
+          = render 'picture_fields', f: picture
+        .links
+          = link_to_add_association 'add picture', f, :pictures
         .form-group
           label.col-md-3.col-sm-3.col-xs-12 for="last-name" 
             | Description

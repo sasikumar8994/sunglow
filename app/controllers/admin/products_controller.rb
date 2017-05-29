@@ -30,8 +30,9 @@ class Admin::ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.save
-        format.html { redirect_to @product, notice: 'Product was successfully created.' }
-        format.json { render :show, status: :created, location: @product }
+        byebug
+        format.html { redirect_to admin_product_path(@product), notice: 'Product was successfully created.' }
+        format.json { render :show, status: :created, location: admin_product_path(@product) }
       else
         format.html { render :new }
         format.json { render json: @product.errors, status: :unprocessable_entity }
@@ -44,8 +45,8 @@ class Admin::ProductsController < ApplicationController
   def update
     respond_to do |format|
       if @product.update(product_params)
-        format.html { redirect_to @product, notice: 'Product was successfully updated.' }
-        format.json { render :show, status: :ok, location: @product }
+        format.html { redirect_to admin_product_path(@product), notice: 'Product was successfully updated.' }
+        format.json { render :show, status: :ok, location: admin_product_path(@product) }
       else
         format.html { render :edit }
         format.json { render json: @product.errors, status: :unprocessable_entity }
@@ -58,7 +59,7 @@ class Admin::ProductsController < ApplicationController
   def destroy
     @product.destroy
     respond_to do |format|
-      format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
+      format.html { redirect_to admin_products_path, notice: 'Product was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -71,6 +72,6 @@ class Admin::ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:name, :description, :benefits, :features, :notes, :specification, :slug)
+      params.require(:product).permit(:name, :description, :benefits, :features, :notes, :specification, :slug, pictures_attributes: [:id, :image, :_destroy])
     end
 end

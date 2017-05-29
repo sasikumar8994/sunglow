@@ -14,5 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require admin_initializer
+//= require cocoon
 //= require gentelella
 //= require gentelella-custom
