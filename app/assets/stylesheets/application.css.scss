@@ -11,10 +11,9 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_self
+ *= require bootstrap
+ *= require scaffolds
  *= require layers
  *= require style
  *= require orange
- *= require scaffolds
  */
-@import "gentelella";
-@import "gentelella-custom";
