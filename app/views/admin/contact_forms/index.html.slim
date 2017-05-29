@@ -36,3 +36,5 @@
                 td = link_to 'Show', contact_form
                 td = link_to 'Edit', edit_contact_form_path(contact_form)
                 td = link_to 'Destroy', contact_form, data: { confirm: 'Are you sure?' }, method: :delete
+          .ml50
+            = paginate @contact_forms

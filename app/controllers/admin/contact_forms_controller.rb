@@ -5,7 +5,7 @@ class Admin::ContactFormsController < ApplicationController
   # GET /contact_forms
   # GET /contact_forms.json
   def index
-    @contact_forms = ContactForm.all
+    @contact_forms = ContactForm.all.page(params[:page])
   end
 
   # GET /contact_forms/1

@@ -6,7 +6,7 @@ class Admin::ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    @products = Product.order(created_at: :desc).page(params[:page])
   end
 
   # GET /products/1
