@@ -1,2 +1,102 @@
-h1 StaticPage#contact_us
-p Find me in app/views/static_page/contact_us.html.slim
+section.main-container
+  .container
+    .row
+      /! main start
+      /! ================
+      .main.col-md-8.space-bottom
+        p.lead It would be great to hear from you! Just drop us a line and ask for anything with which you think we could be helpful. We are looking forward to hearing from you!
+        #MessageSent.alert.alert-success.hidden
+          | We have received your message, we will contact you very soon.
+        #MessageNotSent.alert.alert-danger.hidden
+          | Oops! Something went wrong, please verify that you are not a robot or refresh the page and try again.
+        .contact-form
+        ul
+          - @contact_form.errors.full_messages.each do |message|
+            li = message
+          = simple_form_for @contact_form, html: {id: 'contact-form-with-recaptcha', class: 'margin-clear' } do |f|
+            - if @contact_form.errors.any?
+              #error_explanation
+                h2 = "#{pluralize(@contact_form.errors.count, "error")} prohibited this contact_form from being saved:"
+            .form-group.has-feedback
+              label for="name"  Hours of Operation*
+              = f.input :hours_of_operation, input_html: {class: 'form-control'}, label: false
+              i.fa.fa-user.form-control-feedback
+            .form-group.has-feedback
+              label for="email"  Number of fixtures*
+              = f.input :number_of_fixtures, input_html: {class: 'form-control'}, label: false
+              i.fa.fa-envelope.form-control-feedback
+            .form-group.has-feedback
+              label for="subject"  Company*
+              = f.input :company, input_html: {class: 'form-control'}, label: false
+              i.fa.fa-navicon.form-control-feedback
+            .form-group.has-feedback
+              label for="message"  First Name*
+              = f.input :first_name, input_html: {class: 'form-control'}, label: false
+              i.fa.fa-pencil.form-control-feedback
+            .form-group.has-feedback
+              label for="message"  Last Name*
+              = f.input :last_name, input_html: {class: 'form-control'}, label: false
+              i.fa.fa-pencil.form-control-feedback
+            .form-group.has-feedback
+              label for="message"  Email*
+              = f.input :email, input_html: {class: 'form-control'}, label: false
+              i.fa.fa-pencil.form-control-feedback
+            .form-group.has-feedback
+              label for="message"  Phone*
+              = f.input :phone, input_html: {class: 'form-control'}, label: false
+              i.fa.fa-pencil.form-control-feedback
+            = f.submit
+      /! main end
+      /! sidebar start
+      /! ================
+      aside.col-md-3.col-lg-offset-1
+        .sidebar
+          .side.vertical-divider-left
+            h3.title.logo-font
+              | The
+              span.text-default Project
+            .separator-2.mt-20
+            ul.list
+              li
+                i.fa.fa-home.pr-10
+                | 795 Folsom Ave, Suite 600
+                br/
+                span.pl-20 San Francisco, CA 94107
+              li
+                i.fa.fa-phone.pr-10
+                abbr title="Phone"  P:
+                | (123) 456-7890
+              li
+                i.fa.fa-mobile.pr-10.pl-5
+                abbr title="Phone"  M:
+                | (123) 456-7890
+              li
+                i.fa.fa-envelope.pr-10
+                a href="mailto:info@idea.com"  info@theproject.com
+            ul.social-links.circle.small.margin-clear.clearfix.animated-effect-1
+              li.twitter
+                a href="http://www.twitter.com" target="_blank" 
+                  i.fa.fa-twitter
+              li.skype
+                a href="http://www.skype.com" target="_blank" 
+                  i.fa.fa-skype
+              li.linkedin
+                a href="http://www.linkedin.com" target="_blank" 
+                  i.fa.fa-linkedin
+              li.googleplus
+                a href="http://plus.google.com" target="_blank" 
+                  i.fa.fa-google-plus
+              li.youtube
+                a href="http://www.youtube.com" target="_blank" 
+                  i.fa.fa-youtube-play
+              li.flickr
+                a href="http://www.flickr.com" target="_blank" 
+                  i.fa.fa-flickr
+              li.facebook
+                a href="http://www.facebook.com" target="_blank" 
+                  i.fa.fa-facebook
+            .separator-2.mt-20
+            a.btn.btn-gray.collapsed.map-show.btn-animated aria-controls="collapseMap" aria-expanded="false" data-toggle="collapse" href="#collapseMap" 
+              | Show Map
+              i.fa.fa-plus
+      /! sidebar end

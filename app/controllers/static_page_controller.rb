@@ -6,5 +6,6 @@ class StaticPageController < ApplicationController
   end
 
   def contact_us
+    @contact_form = ContactForm.new
   end
 end

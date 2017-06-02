@@ -29,7 +29,6 @@ gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem 'money-rails'
 gem 'kaminari'
 gem "paranoia", :github => "radar/paranoia", :branch => "rails4"
-gem 'gentelella-rails'
 gem "wysiwyg-rails"
 gem 'cocoon'
 group :development, :test do
