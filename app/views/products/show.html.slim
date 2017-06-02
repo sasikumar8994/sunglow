@@ -1,23 +1,175 @@
-p#notice = notice
-
-p
-  strong Name:
-  = @product.name
-p
-  strong Description:
-  = @product.description
-p
-  strong Benefits:
-  = @product.benefits
-p
-  strong Features:
-  = @product.features
-p
-  strong Notes:
-  = @product.notes
-p
-  strong Specification:
-  = @product.specification
-p
-  strong Slug:
-  = @product.slug
+section.main-container
+  .container
+    .row
+      /! main start
+      /! ================
+      .main.col-md-12
+        /! page-title start
+        /! ================
+        h1.page-title.text-center= @product.name
+        p.large.text-center
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          | beatae, a voluptatum facere.
+        .separator.with-icon
+          i.fa.fa-shopping-bag.bordered
+        /! page-title end
+        .row
+          .col-md-4.col-lg-5
+            /! pills start
+            /! ================
+            /! Nav tabs
+            ul.nav.nav-pills role="tablist" 
+              li.active
+                a aria-expanded="true" data-toggle="tab" href="#pill-1" role="tab" title="images" 
+                  i.fa.fa-camera.pr-5
+                  | Photo
+              li
+                a aria-expanded="false" data-toggle="tab" href="#pill-2" role="tab" title="video" 
+                  i.fa.fa-video-camera.pr-5
+                  | Video
+            /! Tab panes
+            .tab-content.clear-style
+              #pill-1.tab-pane.active
+                .owl-carousel.content-slider-with-thumbs.mb-20.owl-loaded.owl-drag
+                  .owl-stage-outer
+                    .owl-stage 
+                      .owl-item.cloned 
+                        .overlay-container.overlay-visible
+                          img alt="" src="images/product-1-3.jpg" /
+                          a.popup-img.overlay-link href="images/product-1-3.jpg" title=("image title") 
+                            i.icon-plus-1
+                      .owl-item.cloned 
+                        .overlay-container.overlay-visible
+                          img alt="" src="images/product-1-4.jpg" /
+                          a.popup-img.overlay-link href="images/product-1-4.jpg" title=("image title") 
+                            i.icon-plus-1
+                      .owl-item.active 
+                        .overlay-container.overlay-visible
+                          img alt="" src="images/product-1.jpg" /
+                          a.popup-img.overlay-link href="images/product-1.jpg" title=("image title") 
+                            i.icon-plus-1
+                      .owl-item 
+                        .overlay-container.overlay-visible
+                          img alt="" src="images/product-1-2.jpg" /
+                          a.popup-img.overlay-link href="images/product-1-2.jpg" title=("image title") 
+                            i.icon-plus-1
+                      .owl-item 
+                        .overlay-container.overlay-visible
+                          img alt="" src="images/product-1-3.jpg" /
+                          a.popup-img.overlay-link href="images/product-1-3.jpg" title=("image title") 
+                            i.icon-plus-1
+                      .owl-item 
+                        .overlay-container.overlay-visible
+                          img alt="" src="images/product-1-4.jpg" /
+                          a.popup-img.overlay-link href="images/product-1-4.jpg" title=("image title") 
+                            i.icon-plus-1
+                      .owl-item.cloned 
+                        .overlay-container.overlay-visible
+                          img alt="" src="images/product-1.jpg" /
+                          a.popup-img.overlay-link href="images/product-1.jpg" title=("image title") 
+                            i.icon-plus-1
+                      .owl-item.cloned 
+                        .overlay-container.overlay-visible
+                          img alt="" src="images/product-1-2.jpg" /
+                          a.popup-img.overlay-link href="images/product-1-2.jpg" title=("image title") 
+                            i.icon-plus-1
+                  .owl-nav
+                    .owl-prev prev
+                    .owl-next next
+                  .owl-dots.disabled
+                .content-slider-thumbs-container
+                  .owl-carousel.content-slider-thumbs.owl-loaded.owl-drag
+                    .owl-stage-outer
+                      .owl-stage 
+                        .owl-item.current.active style=("width: 117px;") 
+                          .owl-nav-thumb
+                            img alt="" src="images/product-1.jpg" /
+                        .owl-item.active style=("width: 117px;") 
+                          .owl-nav-thumb
+                            img alt="" src="images/product-1-2.jpg" /
+                        .owl-item.active style=("width: 117px;") 
+                          .owl-nav-thumb
+                            img alt="" src="images/product-1-3.jpg" /
+                        .owl-item.active style=("width: 117px;") 
+                          .owl-nav-thumb
+                            img alt="" src="images/product-1-4.jpg" /
+                    .owl-nav.disabled
+                      .owl-prev prev
+                      .owl-next next
+                    .owl-dots.disabled
+              #pill-2.tab-pane
+                .embed-responsive.embed-responsive-16by9
+                  iframe.embed-responsive-item src="//player.vimeo.com/video/29198414?byline=0&amp;portrait=0" 
+                  p
+                    a href="http://vimeo.com/29198414"  Introducing Vimeo Music Store
+                    | from
+                    a href="http://vimeo.com/staff"  Vimeo Staff
+                    | on
+            /! pills end
+            hr.mb-10/
+            .clearfix.mb-20
+              span
+                i.fa.fa-star.text-default
+                i.fa.fa-star.text-default
+                i.fa.fa-star.text-default
+                i.fa.fa-star.text-default
+                i.fa.fa-star
+              a.wishlist href="#" 
+                i.fa.fa-heart-o.pl-10.pr-5
+                | Wishlist
+              ul.pl-20.pull-right.social-links.circle.small.clearfix.margin-clear.animated-effect-1
+                li.twitter
+                  a href="http://www.twitter.com" target="_blank" 
+                    i.fa.fa-twitter
+                li.googleplus
+                  a href="http://plus.google.com" target="_blank" 
+                    i.fa.fa-google-plus
+                li.facebook
+                  a href="http://www.facebook.com" target="_blank" 
+                    i.fa.fa-facebook
+          .col-md-8.col-lg-7.pv-30
+            h2 Description
+            = @product.description
+            h4.space-top Specifications
+            hr/
+            = @product.specification
+            hr/
+          .col-md-8.col-lg-7.pv-30
+            h2 Benefits
+            = @product.benefits
+            h4.space-top Features
+            hr/
+            = @product.features
+            hr/
+          .col-md-8.col-lg-7.pv-30
+            h2 Notes
+            = @product.notes
+            / .row.grid-space-10
+            /   form.clearfix role="form" 
+            /     .col-md-4
+            /       .form-group
+            /         label Quantity
+            /         input.form-control type="text" value="1" /
+            /     .col-md-4
+            /       .form-group
+            /         label Color
+            /         select.form-control
+            /           option Red
+            /           option White
+            /           option Black
+            /           option Blue
+            /           option Orange
+            /     .col-md-4
+            /       .form-group
+            /         label Size
+            /         select.form-control
+            /           option 5.3"
+            /           option 5.7"
+            /     .col-md-12.text-right
+            / span.product.price
+            /   i.icon-tag.pr-10
+            /   s.small.text-muted $149.00
+            /   | $99.00
+            / .product.elements-list.pull-right.clearfix
+            /   input.margin-clear.btn.btn-default type="submit" value=("Add to Cart") /
+      /! main end
