@@ -44,6 +44,12 @@ header.header.fixed.clearfix
                       a href="/"  Home
                     /! mega-menu end
                     /! mega-menu start
+                    - @menus.each do |menu|
+                      li
+                        a href="/" = menu.name
+                    /! mega-menu end
+
+                    /! mega-menu start
                     li.dropdown.mega-menu
                       a.dropdown-toggle data-toggle="dropdown" href="http://htmlcoder.me/preview/the_project/v.1.4/template/index-logistics.html#"  Pages
                       ul.dropdown-menu

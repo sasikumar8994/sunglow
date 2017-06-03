@@ -1,5 +1,6 @@
 class StaticPageController < ApplicationController
   def home
+    @menus = Menu.all
   end
 
   def about_us
