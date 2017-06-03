@@ -1,0 +1,21 @@
+h1 Listing menus
+
+table
+  thead
+    tr
+      th Name
+      th
+      th
+      th
+
+  tbody
+    - @menus.each do |menu|
+      tr
+        td = menu.name
+        td = link_to 'Show', admin_menu_path(menu)
+        td = link_to 'Edit', edit_admin_menu_path(menu)
+        td = link_to 'Destroy', admin_menu_path(menu), data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Menu', new_admin_menu_path

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :menus
   resources :contact_forms, except: [:index, :show, :update, :destroy]
   resources :products, only: :show
   devise_for :users
@@ -11,6 +12,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :products
     resources :contact_forms
+    resources :menus
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
