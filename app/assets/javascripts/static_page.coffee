@@ -2,7 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-$(document).ready ->
+$(document).on 'turbolinks:load', ->
   #Revolution Slider 5
   if $('.slider-revolution-5-container').length > 0
     $('.tp-bannertimer').show()
