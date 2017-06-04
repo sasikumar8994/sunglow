@@ -30,7 +30,6 @@ class Admin::ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.save
-        byebug
         format.html { redirect_to admin_product_path(@product), notice: 'Product was successfully created.' }
         format.json { render :show, status: :created, location: admin_product_path(@product) }
       else
