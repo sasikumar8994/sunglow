@@ -13,5 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap.min
 //= require owl.carousel.min.js
-//= require_tree .
+//= require jquery.themepunch.revolution
+//= require jquery.themepunch.tools.min
+//= require revolution.extension.layeranimation.min
+//= require products
+//= require static_page

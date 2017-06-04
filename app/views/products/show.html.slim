@@ -30,23 +30,15 @@ section.main-container
             /! Tab panes
             .tab-content.clear-style
               #pill-1.tab-pane.active
-                .owl-carousel.owl-theme
-                  .item 
-                      = image_tag("logistics-service-1.jpg")
-                  .item 
-                      = image_tag("logistics-service-2.jpg")
-                  .item
-                      = image_tag("logistics-service-3.jpg")
-                  .item 
-                      = image_tag("logistics-service-1.jpg")
-                  .item 
-                      = image_tag("logistics-service-1.jpg")
-                  .item 
-                      = image_tag("logistics-service-2.jpg")
-                  .item 
-                      = image_tag("logistics-service-3.jpg")
-                  .item 
-                      = image_tag("logistics-service-4.jpg")
+                .owl-carousel.content-slider-with-large-controls
+                  .overlay-container.overlay-visible
+                    = image_tag("logistics-service-1.jpg")
+                    a.popup-img.overlay-link href="images/product-1.jpg" title=("image title") 
+                      i.icon-plus-1
+                  .overlay-container.overlay-visible
+                    = image_tag("logistics-service-1.jpg")
+                    a.popup-img.overlay-link href="images/product-1-2.jpg" title=("image title") 
+                      i.icon-plus-1
               #pill-2.tab-pane
                 .embed-responsive.embed-responsive-16by9
                   iframe.embed-responsive-item src="//player.vimeo.com/video/29198414?byline=0&amp;portrait=0" 
