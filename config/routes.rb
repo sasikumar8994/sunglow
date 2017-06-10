@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :menus
   resources :contact_forms, except: [:index, :show, :update, :destroy]
-  resources :products, only: :show
+  resources :products, only: [:show,:index]
   devise_for :users
   root 'static_page#home'
 
