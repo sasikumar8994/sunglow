@@ -2,19 +2,20 @@
 header.header.fixed.clearfix
   .container
     .row
-      .col-md-3
+      .col-md-4
         /! header-first start
         /! ================
         .header-first.clearfix
           /! logo
-          #logo.logo
-            a href="http://htmlcoder.me/preview/the_project/v.1.4/template/index.html" 
-              = image_tag('logo_orange.png')
+          #logo.logo.pull-left
+            a href="/" 
+              = image_tag('sunglow_logo.png', width: '90px', class: 'pull-left' )
+            h3.title.logo-font.pull-left 
+              | Sunglow
+              span.text-default Lighting
           /! name-and-slogan
-          .site-slogan
-            | Multipurpose HTML5 Template
         /! header-first end
-      .col-md-9
+      .col-md-8
         /! header-second start
         /! ================
         .header-second.clearfix

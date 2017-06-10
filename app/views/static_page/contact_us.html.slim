@@ -4,11 +4,6 @@ section.main-container
       /! main start
       /! ================
       .main.col-md-8.space-bottom
-        p.lead It would be great to hear from you! Just drop us a line and ask for anything with which you think we could be helpful. We are looking forward to hearing from you!
-        #MessageSent.alert.alert-success.hidden
-          | We have received your message, we will contact you very soon.
-        #MessageNotSent.alert.alert-danger.hidden
-          | Oops! Something went wrong, please verify that you are not a robot or refresh the page and try again.
         .contact-form
         ul
           - @contact_form.errors.full_messages.each do |message|
@@ -17,6 +12,11 @@ section.main-container
             - if @contact_form.errors.any?
               #error_explanation
                 h2 = "#{pluralize(@contact_form.errors.count, "error")} prohibited this contact_form from being saved:"
+            h2 Contact Us
+            .separator-2.mt-20
+            br
+            .form-group
+              p It would be great to hear from you! Just drop us a line and ask for anything with which you think we could be helpful. We are looking forward to hearing from you!
             .form-group.has-feedback
               label for="name"  Hours of Operation*
               = f.input :hours_of_operation, input_html: {class: 'form-control'}, label: false
@@ -45,7 +45,7 @@ section.main-container
               label for="message"  Phone*
               = f.input :phone, input_html: {class: 'form-control'}, label: false
               i.fa.fa-pencil.form-control-feedback
-            = f.submit
+            = f.submit 'Send Enquiry', class: 'btn btn-sm hidden-xs btn-default'
       /! main end
       /! sidebar start
       /! ================
@@ -53,26 +53,23 @@ section.main-container
         .sidebar
           .side.vertical-divider-left
             h3.title.logo-font
-              | The
-              span.text-default Project
+              | Sunglow
+              span.text-default Lighting
             .separator-2.mt-20
             ul.list
               li
                 i.fa.fa-home.pr-10
-                | 795 Folsom Ave, Suite 600
+                | 12, Lorong Tambun Jaya 2, Taman Tambun Jaya,
                 br/
-                span.pl-20 San Francisco, CA 94107
+                span.pl-20 14100 Simpang Ampat, Pulau Pinang,
               li
                 i.fa.fa-phone.pr-10
                 abbr title="Phone"  P:
-                | (123) 456-7890
-              li
-                i.fa.fa-mobile.pr-10.pl-5
-                abbr title="Phone"  M:
-                | (123) 456-7890
+                | +60 12 482 2116
+
               li
                 i.fa.fa-envelope.pr-10
-                a href="mailto:info@idea.com"  info@theproject.com
+                a href="mailto:info@idea.com"  sales@sunglow-lighting.com / selvamurthy@sunglow-lighting.com
             ul.social-links.circle.small.margin-clear.clearfix.animated-effect-1
               li.twitter
                 a href="http://www.twitter.com" target="_blank" 

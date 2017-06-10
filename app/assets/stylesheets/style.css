@@ -248,10 +248,15 @@ tbody {
   border-top: none;
 }
 
-.header-first {
+/*.header-first {
   padding: 12px 0 0 0;
-}
+}*/
 
+.company_name {
+  float: left;
+  font-size: 24px;
+  font-weight: lighter;
+}
 .header-second {
   position: relative;
 }
