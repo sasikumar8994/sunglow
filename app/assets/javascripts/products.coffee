@@ -5,7 +5,7 @@
 #Owl carousel
 #-----------------------------------------------
 
-$(document).ready ->
+$(document).on 'turbolinks:load', ->
   syncPosition = (el) ->
     #if you set loop to false, you have to restore this next line
     #var current = el.item.index;

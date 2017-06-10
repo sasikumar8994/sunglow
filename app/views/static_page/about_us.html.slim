@@ -1,2 +1,55 @@
-h1 StaticPage#about_us
-p Find me in app/views/static_page/about_us.html.slim
+section
+  .container
+    .row
+      /! main start
+      /! ================
+      .main.col-md-12
+        /! page-title start
+        /! ================
+        h1.page-title.text-center About
+        .separator
+        /! page-title end
+        .row
+          .col-md-4.col-lg-5
+            /! pills start
+            /! ================
+            /! Nav tabs
+            ul.nav.nav-pills role="tablist" 
+              li.active
+                a aria-expanded="true" data-toggle="tab" href="#pill-1" role="tab" title="images" 
+                  i.fa.fa-camera.pr-5
+                  | Photo
+            /! Tab panes
+            .tab-content.clear-style
+              #pill-1.tab-pane.active
+                .owl-carousel.content-slider-with-large-controls
+                  .overlay-container.overlay-visible
+                    = image_tag("led_bulb.png")
+                    a.popup-img.overlay-link href="assets/led_bulb.png" title=("image title") 
+                      i.icon-plus-1
+                  = image_tag("led_bulb.png")
+                    a.popup-img.overlay-link href="images/product-1-2.jpg" title=("image title") 
+                      i.icon-plus-1
+            /! pills end
+
+          .col-md-8.col-lg-7
+            h2 LightWeight and stylish design
+            p Our engineering expertise enables us to create a compact, lightweight and unique design. At 1.8kg, it weighs only about 20% of most competitor lights
+            h2.space-top Value Engineering
+            hr/
+            p The huge reduction in weight is only due to our alternative cooling design and housing material which eliminates the bulky heat sink and other metal parts. This also means reduction in material costs compared to competitor
+            hr/
+          .col-md-8.col-lg-7
+            h2 Direct replacement
+            | Our product does not require re-wiring or removing and replacing
+            | with additional fixture. Simply screw our Smart Light into existing
+            | HID fixture with or without the ballast.
+            | This allows cost saving right from the start and it is your quickest
+            | way to upgrade to LED Technology.
+            h2.space-top Manufacturer’s Warranty and Quality
+            hr/
+            | All Smart Light LED units come with 3 years warranty directly
+            | from manufacturer in Malaysia.
+            | Our products have gone through strict quality control and is ETL
+            | certified as well as RoHS Compliant.
+            hr/
