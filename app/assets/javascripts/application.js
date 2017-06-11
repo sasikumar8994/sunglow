@@ -20,4 +20,5 @@
 //= require revolution.extension.layeranimation.min
 //= require products
 //= require contact_us
+//= require calculator
 //= require static_page

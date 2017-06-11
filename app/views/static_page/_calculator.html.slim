@@ -1,0 +1,49 @@
+div
+  p What’s your light wattage? (W)
+  p
+    textarea#wattageOrg data-role="none" placeholder=("numbers only please") rows="1" style=("width:340px; height:40px;overflow:hidden;")  400
+  p How many lights you have?
+  p
+    textarea#numOfLig data-role="none" placeholder=("numbers only please") rows="1" style=("width:340px; height:40px;overflow:hidden;")  100
+  p Which product you gonna purchase?
+  p
+    select#newLight style=("width:340px; height:40px; font-size: 15px!important") 
+      option value="200"  Hybrid EZ Brightest&nbsp;—&nbsp;200W
+      option value="180"  Hybrid EZ Brighter&nbsp;—&nbsp;180W
+      option value="150"  Hybrid EZ Bright&nbsp;—&nbsp;150W
+  p
+    | Number of hours used per day:
+    span#rangehour 12
+    | h
+  p
+    input#hourrange max="24" min="1" onchange="showValuehour(this.value)" step="1" style=("width:240px; height:40px;") type="range" value="12" /
+    br/
+  p
+    | Number of days used per year:
+    span#rangeday 180
+    | days
+  p
+    input#dayrange max="365" min="1" onchange="showValueday(this.value)" step="1" style=("width:240px; height:40px;") type="range" value="180" /
+    br/
+  p What’s your electric rate? (dollar/kW.h)
+  p
+    textarea#costPerKwh data-role="none" placeholder=("numbers only please") style=("width:340px; height:40px;overflow:hidden;")  0.12
+  p
+    button onclick="showMoney()" style=("width:340px; height:40px; background-color:#1a6017; border-color:#d3d3d3; font-size:18px;") type="button" 
+      b START CALCULATION
+  p
+    br/
+    b
+  b
+  p#savedmoney
+    br>/
+    | Congrats! You will save $-414.72 on power supply every year with this purchase!
+    br/
+  p
+    b
+  p style="font-size:12px" 
+    | Notice: We Calculate the electric rate defaultly by 12 cents per kW.h, coming from
+    br/
+    a href="http://www.npr.org/sections/money/2011/10/27/141766341/the-price-of-electricity-in-your-state" style="color:blue"  The Price Of Electricity In Your State : Planet Money : NPR
+    br/
+    | , where you can also look up your local electric rate.
