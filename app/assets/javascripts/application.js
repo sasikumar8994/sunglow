@@ -19,4 +19,5 @@
 //= require jquery.themepunch.tools.min
 //= require revolution.extension.layeranimation.min
 //= require products
+//= require contact_us
 //= require static_page
