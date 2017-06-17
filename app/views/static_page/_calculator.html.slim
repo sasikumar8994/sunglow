@@ -8,9 +8,15 @@ div
   p Which product you gonna purchase?
   p
     select#newLight style=("width:340px; height:40px; font-size: 15px!important") 
-      option value="200"  Hybrid EZ Brightest&nbsp;—&nbsp;200W
-      option value="180"  Hybrid EZ Brighter&nbsp;—&nbsp;180W
-      option value="150"  Hybrid EZ Bright&nbsp;—&nbsp;150W
+      option value="200"  Smart Light LED Brightest - 200w
+      option value="180"  Smart Light LED Brighter - 180w
+      option value="150"  Smart Light Led Bright - 150w
+  p
+    select#currency style=("width:340px; height:40px; font-size: 15px!important") 
+      option value="$"  USD
+      option value="RM"  RM
+      option value="₹"  INR
+
   p
     | Number of hours used per day:
     span#rangehour 12
@@ -25,7 +31,7 @@ div
   p
     input#dayrange max="365" min="1" onchange="showValueday(this.value)" step="1" style=("width:240px; height:40px;") type="range" value="180" /
     br/
-  p What’s your electric rate? (dollar/kW.h)
+  p What’s your electric rate? (price/kW.h)
   p
     textarea#costPerKwh data-role="none" placeholder=("numbers only please") style=("width:340px; height:40px;overflow:hidden;")  0.12
   p
@@ -36,14 +42,8 @@ div
     b
   b
   p#savedmoney
-    br>/
-    | Congrats! You will save $-414.72 on power supply every year with this purchase!
-    br/
+
   p
     b
   p style="font-size:12px" 
-    | Notice: We Calculate the electric rate defaultly by 12 cents per kW.h, coming from
-    br/
-    a href="http://www.npr.org/sections/money/2011/10/27/141766341/the-price-of-electricity-in-your-state" style="color:blue"  The Price Of Electricity In Your State : Planet Money : NPR
-    br/
-    | , where you can also look up your local electric rate.
+    | Notice: We Calculate savings based on the electric rate.
