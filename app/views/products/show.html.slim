@@ -33,26 +33,31 @@ section.main-container
                 = render partial: 'static_page/calculator'
             /! pills end
             hr.mb-10/
-          .col-md-8.col-lg-7.height-450
-            h2.text-default Description
-            hr/
-            = @product.description.try(:html_safe)
-          .col-md-8.col-lg-7
-            h2.space-top.text-default Specifications
-            hr/
-            = @product.specification.try(:html_safe)
-          .col-md-8.col-lg-7
-            h2.text-default Benefits
-            hr/
-            = @product.benefits.try(:html_safe)
-          .col-md-8.col-lg-7
-            h2.space-top.text-default Features
-            hr/
-            = @product.features.try(:html_safe)
-          .col-md-8.col-lg-7
-            h2.text-default Notes
-            hr/
-            = @product.notes.try(:html_safe)
+          - if @product.description.present?
+            .col-md-8.col-lg-7.height-450
+              h2.text-default Description
+              hr/
+              = @product.description.try(:html_safe)
+          - if @product.specification.present?
+            .col-md-8.col-lg-7
+              h2.space-top.text-default Specifications
+              hr/
+              = @product.specification.try(:html_safe)
+          - if @product.benefits.present?
+            .col-md-8.col-lg-7
+              h2.text-default Benefits
+              hr/
+              = @product.benefits.try(:html_safe)
+          - if @product.features.present?
+            .col-md-8.col-lg-7
+              h2.space-top.text-default Features
+              hr/
+              = @product.features.try(:html_safe)
+          - if @product.notes.present?
+            .col-md-8.col-lg-7
+              h2.text-default Notes
+              hr/
+              = @product.notes.try(:html_safe)
             / .row.grid-space-10
             /   form.clearfix role="form" 
             /     .col-md-4
