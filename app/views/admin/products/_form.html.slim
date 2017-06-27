@@ -23,6 +23,11 @@
             span.required *
           .col-md-10.col-sm-10.col-xs-12
             = f.input :name, input_html: {class: 'form-control col-md-12 col-xs-12'}, label: false
+          label.col-md-2.col-sm-2.col-xs-12 for="first-name" 
+            | Menu
+            span.required *
+          .col-md-10.col-sm-10.col-xs-12
+            = f.association :menu, input_html: {class: 'form-control col-md-12 col-xs-12'}, label: false
         .form-group
           label.col-md-2.col-sm-2.col-xs-12 for="first-name" 
             | Images

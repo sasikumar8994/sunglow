@@ -51,8 +51,13 @@ header.header.fixed.clearfix
                     /! mega-menu end
                     /! mega-menu start
                     - @menus.each do |menu|
-                      li
-                        a href="/" = menu.name
+                      li.dropdown.mega-menu
+                        a.dropdown-toggle data-toggle="dropdown" href="#" = menu.name
+                        ul.dropdown-menu
+                          - menu.products.each do |product|
+                            li
+                              = link_to product.name.capitalize, product
+
                     /! mega-menu end
 
                     /! mega-menu start

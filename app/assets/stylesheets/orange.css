@@ -873,3 +873,6 @@ header:not(.dark) .dropdown-menu > li.active > a i {
 .fp-slidesNav ul li a span {
   background: rgba(224, 126, 39, 0.8);
 }
+.height-450 {
+  height: 450px;
+}
