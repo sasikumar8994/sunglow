@@ -56,7 +56,7 @@ header.header.fixed.clearfix
                         ul.dropdown-menu
                           - menu.products.each do |product|
                             li
-                              = link_to product.name.capitalize, product
+                              = link_to product.name.upcase, product
 
                     /! mega-menu end
 
