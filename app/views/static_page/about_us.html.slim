@@ -22,7 +22,11 @@ section
               li
                 a aria-expanded="true" data-toggle="tab" href="#pill-2" role="tab" title="calculator"
                   i.fa.fa-calculator.pr-5
-                  | Calculate your usage
+                  | Calculate usage
+              li
+                a aria-expanded="true" data-toggle="tab" href="#pill-3" role="tab" title="calculator"
+                  i.fa.fa-calculator.pr-5
+                  | Lux Calculator
             /! Tab panes
             .tab-content.clear-style
               #pill-1.tab-pane.active
@@ -36,6 +40,8 @@ section
                       i.icon-plus-1
               #pill-2.tab-pane
                 = render partial: 'calculator'
+              #pill-3.tab-pane
+                = render partial: 'lumen_calculator'
             /! pills end
 
           .col-md-8.col-lg-7

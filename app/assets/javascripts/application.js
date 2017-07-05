@@ -21,4 +21,5 @@
 //= require products
 //= require contact_us
 //= require calculator
+//= require lumen_calculator
 //= require static_page

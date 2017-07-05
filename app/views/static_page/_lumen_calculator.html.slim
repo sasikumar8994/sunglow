@@ -1,0 +1,29 @@
+div
+  p Lumens
+  p
+    textarea#lumens data-role="none" onchange="calculateLux(this.value)" placeholder=("numbers only please") rows="1" style=("width:340px; height:40px;overflow:hidden;")  2400
+  p
+    | LED Beam Angle
+    span#beamValue 120
+    |°
+  p
+    input#beam-angle max="179" min="1" onchange="showBeamValue(this.value)" step="1" style=("width:240px; height:40px;") type="range" value="120" /
+    br/
+  p
+    | Distance from Surface to Light:
+    span#lightValue 1.0
+    | m
+  p
+    input#lightDistance max="10" min="0.1" onchange="showLightDistance(this.value)" step="0.1" style=("width:240px; height:40px;") type="range" value="1" /
+    br/
+  p
+    | Beam Width:
+    span#beamWidth 3.46
+    | m
+
+  p Lux:
+  p
+    textarea#lux data-role="none" onchange="calculateLumens(this.value)" placeholder=("numbers only please") style=("width:340px; height:40px;overflow:hidden;")  764
+  p
+    br/
+    b

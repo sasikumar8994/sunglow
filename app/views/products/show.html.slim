@@ -19,18 +19,18 @@ section.main-container
                 a aria-expanded="true" data-toggle="tab" href="#pill-1" role="tab" title="images" 
                   i.fa.fa-camera.pr-5
                   | Photo
-              li
-                a aria-expanded="true" data-toggle="tab" href="#pill-2" role="tab" title="calculator"
-                  i.fa.fa-calculator.pr-5
-                  | Calculate your usage
+              / li
+              /   a aria-expanded="true" data-toggle="tab" href="#pill-2" role="tab" title="calculator"
+              /     i.fa.fa-calculator.pr-5
+              /     | Calculate your usage
             /! Tab panes
             .tab-content.clear-style
               #pill-1.tab-pane.active
                 .owl-carousel.content-slider-with-large-controls
                   -@product.pictures.each do |pic|
                     = image_tag("#{pic.image.url}", style: 'height: 333px;')
-              #pill-2.tab-pane
-                = render partial: 'static_page/calculator'
+              / #pill-2.tab-pane
+              /   = render partial: 'static_page/calculator'
             /! pills end
             hr.mb-10/
           - if @product.description.present?
